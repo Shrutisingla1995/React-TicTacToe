@@ -1,38 +1,72 @@
-.App {
+body {
+  font: 14px "Century Gothic", Futura, sans-serif;
+  margin: 20px;
+}
+
+ol, ul {
+  padding-left: 30px;
+}
+
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.status {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid blueviolet;
+  font-weight: 700;
+}
+
+.square,.circle {
+  background: #fff;
+  border: 1px solid blueviolet;
+  float: left;
+  font-size: 34px;
+  font-weight: 500;
+  line-height: 34px;
+  height: 80px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
   text-align: center;
+  width: 80px;
+}
+.circle{
+  color:red;
+}
+.square:focus {
+  outline: none;
+}
+.square:hover{
+  background:#cfc8d6;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.kbd-navigation .square:focus {
+  background: #ddd;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.game {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: row;
+  background: #f5ebff;
+  padding: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.game-info {
+  margin-left: 20px;
+}
+.again-btn{
+  background: blueviolet;
+  color:white;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 10px 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.game-board{
+  margin:auto;
 }
